@@ -164,7 +164,7 @@ export function LoanDetails({ id }: { id: number }) {
                     {new Date(po.expected_payment_date).toLocaleDateString()}
                   </TableCell>
                   <TableCell>
-                    <Badge variant={getBadgeVariant(po.status)}>
+                    <Badge variant={getBadgeVariant(po.status) as "default" | "destructive" | "outline" | "secondary"}>
                       {po.status}
                     </Badge>
                   </TableCell>
